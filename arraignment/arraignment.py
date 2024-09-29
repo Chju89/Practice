@@ -11,8 +11,6 @@ def main():
                 continue
             counter.update(x for x in split("[^a-z]+", line) if x)
     freqSorted = sorted(counter, key=counter.get, reverse=True)
-    longestWord = max(counter, key=len)
-    wordLength = len(longestWord)
 
     count = 0
     print("Word".rjust(16), "|", "Count".ljust(16))
